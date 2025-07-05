@@ -57,21 +57,26 @@
       max-width: 1000px;
       margin: 0 auto;
     }
-    .step {
+.step {
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 10px;
-  padding: 15px; /* уменьшили с 20 */
+  padding: 15px;
   flex: 1 1 200px;
   max-width: 220px;
   font-size: 16px;
   text-align: center;
+  word-wrap: break-word;
 }
 @media (max-width: 768px) {
   .step {
-    max-width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+    font-size: 14px; /* чуть меньше для мобилы */
+    padding: 12px;   /* чуть меньше отступ */
   }
 }
+
 
     .values {
       display: flex;
@@ -99,6 +104,12 @@
       gap: 10px;
       transition: box-shadow 0.3s ease;
     }
+@media (max-width: 768px) {
+  .doc-card {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
     .doc-card:hover {
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
@@ -142,7 +153,7 @@
   </style>
 </head>
 <body>
-<header class="fade-in" style="padding-bottom: 20px;">
+<header class="fade-in" style="padding-bottom: 10px;">
   <img id="autobutler-logo" src="your_logo.png" alt="AutoButler logo" style="width:200px; margin-bottom:20px;">
   <h1>Позабочусь о вашей машине,<br>пока вы заботитесь о себе</h1>
   <p>AutoButler — ваш персональный автоконсьерж</p>
