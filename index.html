@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AutoButler — Персональный автоконсьерж</title>
@@ -40,7 +41,7 @@
       background-color: #003322;
     }
     section {
-      padding: 60px 20px;
+      padding: 30px 15px;
       text-align: left;
     }
     section h2 {
@@ -69,13 +70,18 @@
   word-wrap: break-word;
 }
 @media (max-width: 768px) {
+  .steps {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
   .step {
-    max-width: 90%;
-    margin: 0 auto;
-    font-size: 14px; /* чуть меньше для мобилы */
-    padding: 12px;   /* чуть меньше отступ */
+    max-width: 95%;
+    padding: 12px;
+    font-size: 14px;
   }
 }
+
 
 
     .values {
@@ -260,21 +266,43 @@
     </div>
   </section>
 
-  <section class="fade-in">
-    <h2>Оставьте заявку</h2>
-    <form action="https://formsubmit.co/jekanson20@gmail.com" method="POST" style="max-width:400px; margin:0 auto; text-align:left;">
-      <label>Ваше имя<br>
-        <input type="text" name="name" required style="width:100%; padding:10px; margin-top:5px; margin-bottom:15px;">
+<section class="fade-in">
+  <h2>Оставьте заявку</h2>
+  <div style="
+      max-width: 400px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      ">
+    <form action="https://formsubmit.co/jekanson20@gmail.com" method="POST"
+      style="width:100%; display:flex; flex-direction:column; gap:12px;">
+      <label style="font-weight:500; font-size:14px;">Ваше имя
+        <input type="text" name="name" required
+          style="width:100%;padding:10px;margin-top:5px;border:1px solid #ccc;border-radius:6px;box-sizing:border-box;">
       </label>
-      <label>Телефон<br>
-        <input type="tel" name="phone" required style="width:100%; padding:10px; margin-top:5px; margin-bottom:15px;">
+      <label style="font-weight:500; font-size:14px;">Телефон
+        <input type="tel" name="phone" required
+          style="width:100%;padding:10px;margin-top:5px;border:1px solid #ccc;border-radius:6px;box-sizing:border-box;">
       </label>
-      <label>Марка и модель авто<br>
-        <input type="text" name="car" style="width:100%; padding:10px; margin-top:5px; margin-bottom:15px;">
+      <label style="font-weight:500; font-size:14px;">Марка и модель авто
+        <input type="text" name="car"
+          style="width:100%;padding:10px;margin-top:5px;border:1px solid #ccc;border-radius:6px;box-sizing:border-box;">
       </label>
-      <button type="submit" class="btn" style="width:100%;">Отправить</button>
+      <button type="submit" class="btn"
+        style="width:100%; margin-top:15px; padding:12px; border-radius:6px; box-sizing:border-box;">
+        Отправить
+      </button>
     </form>
-  </section>
+  </div>
+</section>
+
+
+
+
 
   <footer>
     © 2025 AutoButler. Все права защищены. <br>
